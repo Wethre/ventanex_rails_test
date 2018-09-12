@@ -14,7 +14,7 @@
               <th>Account Type</th>
               <th>Account Number</th>
               <th>
-                <button type="button" class="btn btn-success">Create</button>
+                <%= link_to "Create", new_pay_account_path, class: "btn btn-success" %>
               </th>
             </tr>
           </thead>
@@ -22,7 +22,7 @@
             <% @pay_accounts.each do |pay_account| %>
               <tr>
                 <td><%= pay_account.nickname %></td>
-                <td><%= pay_account.account_type.humanize %></td>
+                <td><%= pay_account.account_type %></td>
                 <td>
                   <%= pay_account.account_number %>
                   <button type="button" class="btn btn-sm btn-default">hide</button>
